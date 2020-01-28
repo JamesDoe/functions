@@ -1,7 +1,7 @@
 # functions
 helpful JavaScript functions
 
-ToggledAtLeastOnce();
+<h1>ToggledAtLeastOnce()</h1>
 
 creates a switch that can only be toggled once.
   - pass a truthy value to activate the toggle
