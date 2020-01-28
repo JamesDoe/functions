@@ -1,11 +1,11 @@
-function ToggledAtLeastOnce(Toggled) {
-    return (function(toggle) {
-              let _toggled = false, _Toggled = Toggled;
-              return function(toggle = _Toggled||0) {
-                if(!_toggled) {
-                  if(!!toggle) return !(_toggled = true);
-                }
-                return true;
-              };
-})(Toggled)
+function ToggledAtLeastOnce(_toggle) {
+    return (function () {
+        let _isToggled = false, _Toggled = _toggle;
+        return function (toggled) {
+            if (!_isToggled) {
+                if (!!_Toggled || !!toggled) return !(_isToggled = true);
+            }
+            return true;
+        };
+    })(_toggle)
 };
